@@ -12,7 +12,11 @@ The goal of WesCell is to faciliate and acceralte the process of analyzing sampl
 You can install the released version of WesCell with the following code:
 
 ``` r
-install.packages("WesCell")
+if (!require(devtools)){
+  install.packages("devtools")
+ }
+ 
+ devtools::install_github("qqcher/WesCell")
 ```
 
 ## Example
