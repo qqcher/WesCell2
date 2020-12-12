@@ -1,0 +1,24 @@
+{
+    "id": "9796DE60",
+    "path": "~/Desktop/R/WesCell.package/WesCell/R/plate.to.df.R",
+    "project_path": "R/plate.to.df.R",
+    "type": "r_source",
+    "hash": "3312120186",
+    "contents": "",
+    "dirty": false,
+    "created": 1607658672814.0,
+    "source_on_save": false,
+    "relative_order": 4,
+    "properties": {
+        "cursorPosition": "60,0",
+        "scrollLine": "9"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1607658697,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1607658697732,
+    "read_only": false,
+    "read_only_alternatives": []
+}
