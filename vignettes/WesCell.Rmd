@@ -1,0 +1,19 @@
+---
+title: "WesCell"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{WesCell}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(WesCell)
+```
