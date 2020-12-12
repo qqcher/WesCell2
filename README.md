@@ -23,18 +23,18 @@ This is a basic example which shows how to import your raw RT-qPCR csv file:
 library(WesCell)
 result <- analyze.qPCR("your raw RT-qPCR csv file")
 ```
-The result is in a list form. To convert the list into a dataframe and clean the dataframe, use the followng code:
+The result is in a list form. To convert the list into a dataframe and clean the dataframe, use the following code:
 ```r
 result_df <- list.to.df(result)
 result_df <- clean.data(result_df)
 ```
 After the previous two steps, your data should be ready for further analysis. Following are some of the tests you can run:
-```
+```r
 ## Willcoxon Test
 Wilcoxon <-  df.wilcoxon.test(result_df,"Primer","inflammatory.factor","exp.data","cell.line")
 
 ## 3sub Unique Average
-3sub_average <- df.3sub.unique.av(df,"Primer","inflammatory.factor","Sample","exp.data","cell.line")
+sub_average <- df.3sub.unique.av(df,"Primer","inflammatory.factor","Sample","exp.data","cell.line")
 
 ## T-test
 T_test <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")
