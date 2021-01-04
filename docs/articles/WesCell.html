@@ -82,7 +82,11 @@
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>You can install the released version of WesCell with the following code:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit">
-<span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"WesCell"</span><span class="op">)</span></pre></div>
+<span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">require</a></span><span class="op">(</span><span class="va"><a href="https://devtools.r-lib.org/">devtools</a></span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span>
+ <span class="op">}</span>
+ 
+ <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org//reference/remote-reexports.html">install_github</a></span><span class="op">(</span><span class="st">"qqcher/WesCell"</span><span class="op">)</span></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -105,6 +109,33 @@
 
 <span class="co">## T-test</span>
 <span class="va">T_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/df.t.test.html">df.t.test</a></span><span class="op">(</span><span class="va">df</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span></pre></div>
+</div>
+<div id="details" class="section level2">
+<h2 class="hasAnchor">
+<a href="#details" class="anchor"></a>Details</h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>Authors<span class="op">@</span>R<span class="op">:</span><span class="st"> </span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="st">    </span><span class="kw">person</span>(<span class="dt">given =</span> <span class="st">"Camille"</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>           <span class="dt">family =</span> <span class="st">"Chossis"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>           <span class="dt">role =</span> <span class="kw">c</span>(<span class="st">"aut"</span>, <span class="st">"cre"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5"></a>           <span class="dt">email =</span> <span class="st">"cchossis@wesleyan.edu"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6"></a>           <span class="dt">comment =</span> <span class="kw">c</span>(<span class="dt">ORCID =</span> <span class="st">"https://orcid.org/0000-0003-4931-9015"</span>))</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="kw">person</span>(<span class="dt">given =</span> <span class="st">"Cher"</span>,</span>
+<span id="cb5-8"><a href="#cb5-8"></a>           <span class="dt">family =</span> <span class="st">"Qin"</span>,</span>
+<span id="cb5-9"><a href="#cb5-9"></a>           <span class="dt">role =</span> <span class="kw">c</span>(<span class="st">"aut"</span>, <span class="st">"cre"</span>),</span>
+<span id="cb5-10"><a href="#cb5-10"></a>           <span class="dt">email =</span> <span class="st">"qqin@wesleyan.edu"</span>)</span>
+<span id="cb5-11"><a href="#cb5-11"></a>Description<span class="op">:</span><span class="st"> </span>Steamline RT<span class="op">-</span>qPCR raw data analysis.</span>
+<span id="cb5-12"><a href="#cb5-12"></a>License<span class="op">:</span><span class="st"> </span>MIT <span class="op">+</span><span class="st"> </span>file LICENSE</span>
+<span id="cb5-13"><a href="#cb5-13"></a>Encoding<span class="op">:</span><span class="st"> </span>UTF<span class="dv">-8</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>LazyData<span class="op">:</span><span class="st"> </span>true</span>
+<span id="cb5-15"><a href="#cb5-15"></a>Roxygen<span class="op">:</span><span class="st"> </span><span class="kw">list</span>(<span class="dt">markdown =</span> <span class="ot">TRUE</span>)</span>
+<span id="cb5-16"><a href="#cb5-16"></a>RoxygenNote<span class="op">:</span><span class="st"> </span><span class="dv">7</span>.<span class="fl">1.1</span></span>
+<span id="cb5-17"><a href="#cb5-17"></a>Imports<span class="op">:</span></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="st">  </span>utils,</span>
+<span id="cb5-19"><a href="#cb5-19"></a>  stats</span>
+<span id="cb5-20"><a href="#cb5-20"></a>Suggests<span class="op">:</span><span class="st"> </span></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="st">    </span>knitr,</span>
+<span id="cb5-22"><a href="#cb5-22"></a>    rmarkdown</span>
+<span id="cb5-23"><a href="#cb5-23"></a>VignetteBuilder<span class="op">:</span><span class="st"> </span>knitr</span></code></pre></div>
 </div>
   </div>
 

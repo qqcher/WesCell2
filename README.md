@@ -54,7 +54,7 @@ Authors@R:
            comment = c(ORCID = "https://orcid.org/0000-0003-4931-9015"))
     person(given = "Cher",
            family = "Qin",
-           role = c("com", "ctb"),
+           role = c("aut", "cre"),
            email = "qqin@wesleyan.edu")
 Description: Steamline RT-qPCR raw data analysis.
 License: MIT + file LICENSE
