@@ -26,7 +26,11 @@ The goal of WesCell is to faciliate and acceralte the process of analyzing sampl
 You can install the released version of WesCell with the following code:
 
 ``` {r, eval = FALSE}
-install.packages("WesCell")
+if (!require(devtools)){
+  install.packages("devtools")
+ }
+ 
+ devtools::install_github("qqcher/WesCell")
 ```
 
 ## Example
@@ -59,3 +63,29 @@ T_test <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")
 ```
 
 
+## Details
+```{r, eval= FALSE}
+Authors@R: 
+    person(given = "Camille",
+           family = "Chossis",
+           role = c("aut", "cre"),
+           email = "cchossis@wesleyan.edu",
+           comment = c(ORCID = "https://orcid.org/0000-0003-4931-9015"))
+    person(given = "Cher",
+           family = "Qin",
+           role = c("com", "ctb"),
+           email = "qqin@wesleyan.edu")
+Description: Steamline RT-qPCR raw data analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+  utils,
+  stats
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+```

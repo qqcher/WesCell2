@@ -44,3 +44,29 @@ sub_average <- df.3sub.unique.av(df,"Primer","inflammatory.factor","Sample","exp
 T_test <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")
 ```
 
+### Details
+```r
+Authors@R: 
+    person(given = "Camille",
+           family = "Chossis",
+           role = c("aut", "cre"),
+           email = "cchossis@wesleyan.edu",
+           comment = c(ORCID = "https://orcid.org/0000-0003-4931-9015"))
+    person(given = "Cher",
+           family = "Qin",
+           role = c("com", "ctb"),
+           email = "qqin@wesleyan.edu")
+Description: Steamline RT-qPCR raw data analysis.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Imports:
+  utils,
+  stats
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+```
