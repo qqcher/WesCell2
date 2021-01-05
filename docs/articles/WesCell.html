@@ -94,11 +94,22 @@
 <p>This is a basic example which shows how to import your raw RT-qPCR csv file:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit">
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">WesCell</span><span class="op">)</span>
-<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/analyze.qPCR.html">analyze.qPCR</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span><span class="op">(</span><span class="st">"mydata"</span>, package<span class="op">=</span><span class="st">"WesCell"</span><span class="op">)</span><span class="op">)</span></pre></div>
-<p>The package will read your raw RT-qPCR csv file as a list. To convert the list into a dataframe and clean the dataframe, use the following code:</p>
+<span class="va">result</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/analyze.qPCR.html">analyze.qPCR</a></span><span class="op">(</span><span class="st">"your raw RT-qPCR csv file"</span><span class="op">)</span></pre></div>
+<div class="figure">
+<img src="Result.jpg" alt=""><p class="caption"><em>An example of a qPCR csv file</em></p>
+</div>
+<p>Above picture is an example of a raw RT-qPCR csv file. The package will read your raw RT-qPCR csv file as a list.</p>
+<div class="figure">
+<img src="Result2.jpg" alt=""><p class="caption"><em>This is your raw RT-qPCR csv file now in a list form.</em></p>
+</div>
+<p>After importation, rhe raw RT-qPCR csv file will be read as shown in the above picture.</p>
+<p>To convert the list into a dataframe and clean the dataframe, use the following code:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 <span class="va">result_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/list.to.df.html">list.to.df</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span>
 <span class="va">result_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean.data.html">clean.data</a></span><span class="op">(</span><span class="va">result_df</span><span class="op">)</span></pre></div>
+<div class="figure">
+<img src="list.to.df.jpg" alt=""><p class="caption"><em>Your list of data is now in a clean dataframe.</em></p>
+</div>
 <p>After the previous two steps, your data should be ready for further analysis. Following are some of the tests you can run:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="co">## Willcoxon Test</span>

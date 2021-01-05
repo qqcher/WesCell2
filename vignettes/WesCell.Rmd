@@ -39,16 +39,26 @@ This is a basic example which shows how to import your raw RT-qPCR csv file:
 
 ```{r, eval = FALSE} 
 library(WesCell)
-result <- analyze.qPCR(system.file("mydata", package="WesCell"))
+result <- analyze.qPCR("your raw RT-qPCR csv file")
 ```
 
-The package will read your raw RT-qPCR csv file as a list. To convert the list into a dataframe and clean the dataframe, use the following code:
+![*An example of a qPCR csv file*](Result.jpg) 
+  
+  Above picture is an example of a raw RT-qPCR csv file. The package will read your raw RT-qPCR csv file as a list. 
+
+![*This is your raw RT-qPCR csv file now in a list form.*](Result2.jpg)
+ 
+  After importation, rhe raw RT-qPCR csv file will be read as shown in the above picture.
+
+  To convert the list into a dataframe and clean the dataframe, use the following code:
 ```{r, eval = FALSE}
 result_df <- list.to.df(result)
 result_df <- clean.data(result_df)
 ```
 
-After the previous two steps, your data should be ready for further analysis. Following are some of the tests you can run:
+![*Your list of data is now in a clean dataframe.*](list.to.df.jpg)
+
+  After the previous two steps, your data should be ready for further analysis. Following are some of the tests you can run:
 
 ```{r, eval = FALSE}
 ## Willcoxon Test
