@@ -39,9 +39,8 @@ This is a basic example which shows how to import your raw RT-qPCR csv file:
 
 ```{r, eval = FALSE} 
 library(WesCell)
-result <- analyze.qPCR("your raw RT-qPCR csv file")
+result <- analyze.qPCR(system.file("mydata", package="WesCell"))
 ```
-![](Result2.jpg)
 
 The package will read your raw RT-qPCR csv file as a list. To convert the list into a dataframe and clean the dataframe, use the following code:
 ```{r, eval = FALSE}
