@@ -75,9 +75,10 @@ T_test <- df.t.test(mydata,"Primer","inflammatory.factor","exp.data","cell.line"
 ```{r, eval = FALSE}
 add.variable.one(mydata)
 ```
-  ![*example of the message you will see for `add.variable.one()`*](add.variable.one.jpg)
+  Once this function is inputted, the console will prompt you with the question "What is the name of the new variable?" To which, you can simply reply with the name of the variable without or without quotation marks.
   
-  Once this function is inputted, the console will prompt you with the question "What is the name of the new variable?" To which, you can simply reply with the name of the variable without or without quotation marks. The example picture is above
+  ![*example of the message you will see for `add.variable.one()`*](add.variable.one.jpg)
+
   
   You can also add various variables to your data frame with the following code:
 ```{r, eval = FALSE}
