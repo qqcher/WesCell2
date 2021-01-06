@@ -71,3 +71,13 @@ sub_average <- df.3sub.unique.av(df,"Primer","inflammatory.factor","Sample","exp
 T_test <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")
 ```
 
+  In addition to the tree tests, WesCell allows you to add variable via the console:
+```{r, eval = FALSE}
+add.variable(df)
+```
+
+  You can also add various variables to your dataframe with the following code:
+```{r, eval = FALSE}
+new.df <- add.variable.bulk(df,c("cell.line","cell.replicate","date.performed"))
+```
+
