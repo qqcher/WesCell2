@@ -6,10 +6,10 @@
 #' @return A new data frame with newly generated empty columns
 #' @examples
 #' \dontrun{
-#' new.df <- add_variable_one(df)
+#' new.df <- add.variable.one(df)
 #' }
 
-add_variable_one <- function(df) {
+add.variable.one <- function(df) {
 
 x <- readline(prompt="What is the name of the new variable?   ")
 

@@ -73,7 +73,7 @@ T_test <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")
 
   In addition to the tree tests, WesCell allows you to add variable via the console:
 ```{r, eval = FALSE}
-add.variable(df)
+add_variable_one(mydata)
 ```
 
   You can also add various variables to your dataframe with the following code:
