@@ -79,7 +79,6 @@ add.variable.one(mydata)
   
   ![*example of the message you will see for `add.variable.one()`*](add_variable_one.jpg)
 
-  
   You can also add various variables to your data frame with the following code:
 ```{r, eval = FALSE}
 mydata <- add.variable.bulk(mydata,c("cell.line","cell.replicate","date.performed"))
@@ -87,6 +86,6 @@ mydata <- add.variable.bulk(mydata,c("cell.line","cell.replicate","date.performe
   Different from the function `add.variable.one`, this function does not prompt a message in the console. Instead, you will have to some level of coding. The first argument of the function will be the name of data frame that you are appending. The second argument will be the name/names of new variables added. After new variables are added, you can input the values. 
   The difference between `add.variable.one` and `add.variable.bulk`, like their name suggests, is that the later can input several new variables at the same time. 
   
-  ![*an example of the dataframe with new variables*](add.variable.bulk.jpg)
+![*an example of the dataframe with new variables*](add.variable.bulk.jpg)
 
 
