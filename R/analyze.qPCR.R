@@ -6,6 +6,7 @@
 #' Designed for 96 wells plates, will work for other plate size depending on raw file format.
 #'
 #' @return A list with the plate map at each step of the analysis process.
+#' @export
 #' @examples
 #' \dontrun{
 #' result <- analyze.qPCR()

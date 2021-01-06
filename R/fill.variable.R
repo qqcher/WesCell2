@@ -5,6 +5,7 @@
 #'
 #' @param df A data frame
 #' @return A new data frame with the newly filled-in information.
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- fill.variable(df)

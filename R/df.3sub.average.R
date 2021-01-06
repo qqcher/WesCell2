@@ -9,6 +9,7 @@
 #' @param data Name of the column containing the values to average. Has to match a column name in the data frame.
 #' @param data.add Additional variable you wish to carry over to the new data frame. Has to match a column name in the data frame.
 #' @return A new data frame with average of technical replicates.
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- df.3sub.unique.av(df,"Primer","inflammatory.factor","Sample","exp.data","cell.line")

@@ -4,6 +4,7 @@
 #'
 #' @param df A data frame
 #' @return A new data frame with newly generated empty columns
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- add.variable.one(df)

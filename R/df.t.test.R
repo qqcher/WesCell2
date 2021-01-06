@@ -8,6 +8,7 @@
 #' @param t.test.var1 Name of the column containing the data. Has to match a column name in the data frame.
 #' @param t.test.var2 Name of the grouping variable for the t-test. Has to match a column name in the data frame.
 #' @return A new data frame with a list of p-value for all grouping combinations.
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- df.t.test(df,"Primer","inflammatory.factor","exp.data","cell.line")

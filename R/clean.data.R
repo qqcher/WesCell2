@@ -6,6 +6,7 @@
 #'
 #' @param df A data frame
 #' @return A new data frame without the dropped rows
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- clean.data(df)

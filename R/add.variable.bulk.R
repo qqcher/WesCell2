@@ -3,6 +3,7 @@
 #' @param df A data frame
 #' @param l A list of the empty columns to be appended
 #' @return A new data frame with newly generated empty columns
+#' @export
 #' @examples
 #' \dontrun{
 #' new.df <- add.variable.bulk(df,c("cell.line","cell.replicate","date.performed"))
