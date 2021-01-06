@@ -105,27 +105,36 @@
 <p>After importation, rhe raw RT-qPCR csv file will be read as shown in the above picture.</p>
 <p>To convert the list into a dataframe and clean the dataframe, use the following code:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit">
-<span class="va">result_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/list.to.df.html">list.to.df</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span>
-<span class="va">result_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean.data.html">clean.data</a></span><span class="op">(</span><span class="va">result_df</span><span class="op">)</span></pre></div>
+<span class="va">mydata</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/list.to.df.html">list.to.df</a></span><span class="op">(</span><span class="va">result</span><span class="op">)</span>
+<span class="va">mydata</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/clean.data.html">clean.data</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">)</span></pre></div>
 <div class="figure">
 <img src="list.to.df.jpg" alt=""><p class="caption"><em>Your list of data is now in a clean dataframe.</em></p>
 </div>
 <p>After the previous two steps, your data should be ready for further analysis. Following are some of the tests you can run:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="co">## Willcoxon Test</span>
-<span class="va">Wilcoxon</span> <span class="op">&lt;-</span>  <span class="fu"><a href="../reference/df.wilcoxon.test.html">df.wilcoxon.test</a></span><span class="op">(</span><span class="va">result_df</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span>
+<span class="va">Wilcoxon</span> <span class="op">&lt;-</span>  <span class="fu"><a href="../reference/df.wilcoxon.test.html">df.wilcoxon.test</a></span><span class="op">(</span><span class="va">mydata</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span>
 
 <span class="co">## 3sub Unique Average</span>
-<span class="va">sub_average</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/df.3sub.unique.av.html">df.3sub.unique.av</a></span><span class="op">(</span><span class="va">df</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"Sample"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span>
+<span class="va">sub_average</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/df.3sub.unique.av.html">df.3sub.unique.av</a></span><span class="op">(</span><span class="va">mydata</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span>
 
 <span class="co">## T-test</span>
-<span class="va">T_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/df.t.test.html">df.t.test</a></span><span class="op">(</span><span class="va">df</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span></pre></div>
+<span class="va">T_test</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/df.t.test.html">df.t.test</a></span><span class="op">(</span><span class="va">mydata</span>,<span class="st">"Primer"</span>,<span class="st">"inflammatory.factor"</span>,<span class="st">"exp.data"</span>,<span class="st">"cell.line"</span><span class="op">)</span></pre></div>
 <p>In addition to the tree tests, WesCell allows you to add variable via the console:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit">
-<span class="fu">add.variable</span><span class="op">(</span><span class="va">df</span><span class="op">)</span></pre></div>
+<span class="fu"><a href="../reference/add.variable.one.html">add.variable.one</a></span><span class="op">(</span><span class="va">mydata</span><span class="op">)</span></pre></div>
+<p>Once this function is inputted, the console will prompt you with the question “What is the name of the new variable?” To which, you can simply reply with the name of the variable without or without quotation marks. The example picutre is below:</p>
+<div class="figure">
+<img src="add.variable.one.jpg" alt=""><p class="caption"><em>example of the message you will see for <code><a href="../reference/add.variable.one.html">add.variable.one()</a></code></em></p>
+</div>
 <p>You can also add various variables to your dataframe with the following code:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit">
-<span class="va">new.df</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/add.variable.bulk.html">add.variable.bulk</a></span><span class="op">(</span><span class="va">df</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"cell.line"</span>,<span class="st">"cell.replicate"</span>,<span class="st">"date.performed"</span><span class="op">)</span><span class="op">)</span></pre></div>
+<span class="va">mydata</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/add.variable.bulk.html">add.variable.bulk</a></span><span class="op">(</span><span class="va">mydata</span>,<span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"cell.line"</span>,<span class="st">"cell.replicate"</span>,<span class="st">"date.performed"</span><span class="op">)</span><span class="op">)</span></pre></div>
+<p>Different from the function <code>add.variable.one</code>, this function does not prompt a message in the console. Instead, you will have to some level of coding. The first argument of the function will be the name of dataframe that you are appending. The second argument will be the name/names of new varaibles added. The difference between <code>add.variable.one</code> and <code>add.variable.bulk</code>, like their name suggests, is that the later can input several new variables at the same time.</p>
+<div class="figure">
+<img src="add.variable.bulk.jpg" alt=""><p class="caption"><em>an example of the dataframe with new variables</em></p>
+</div>
+<p>After new variables are added, you can manuling input the values.</p>
 </div>
   </div>
 
