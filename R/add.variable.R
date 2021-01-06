@@ -9,7 +9,7 @@
 #' new.df <- add.variable(df)
 #' }
 
-add.variable.one <- function(df) {
+add_variable_one <- function(df) {
 
 x <- readline(prompt="What is the name of the new variable?   ")
 
